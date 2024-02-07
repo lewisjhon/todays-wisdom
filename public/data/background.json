@@ -1,0 +1,15 @@
+{
+  "version" : "0.0.1",
+  "background" : [
+    {
+      "id" : 1,
+      "title" : "로마 콜로세움",
+      "filename" : "/rome/colo.png"
+    },
+    {
+      "id" : 2,
+      "title" : "크로아티아 자다르",
+      "filename" : "/croatia/jadar.png"
+    }
+  ]
+}

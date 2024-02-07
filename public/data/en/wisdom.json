@@ -1,0 +1,15 @@
+{
+  "version" : "0.0.1",
+  "wisdom" : [
+    {
+      "id" : 1,
+      "author" : "G. Park",
+      "phrase" : "Late is truly late."
+    },
+    {
+      "id" :  2,
+      "author" : "G. Park",
+      "phrase" : "Early birds is very tired..ㅜㅜ"
+    }
+  ]
+}
