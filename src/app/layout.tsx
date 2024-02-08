@@ -31,7 +31,7 @@ export default function RootLayout({
       <meta name="keywords" content="위즈덤, 명언, good phrase, wisdom, 오늘의, 오늘의 명언, 삶의 지혜"/>
       <meta property="og:type" content="website"/>
       <meta property="og:title" content="위즈덤"/>
-      <meta property="og:description" content="매일매일 삶의 지혜를 주는 명언’"/>
+      <meta property="og:description" content="매일매일 삶의 지혜를 주는 명언"/>
       <title>위즈덤</title>
     </head>
     <body className={noto.className}>
