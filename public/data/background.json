@@ -1,6 +1,6 @@
 {
   "version" : "0.0.1",
-  "background" : [
+  "data" : [
     {
       "id" : 1,
       "title" : "로마 콜로세움",
