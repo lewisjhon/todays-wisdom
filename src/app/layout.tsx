@@ -23,12 +23,20 @@ export default function RootLayout({
   return (
     <html lang="en">
     <head>
+      <meta charSet="UTF-8"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
       <meta name="google-adsense-account" content="ca-pub-4667051183270672"/>
+      <meta name="viewport"
+            content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+      <meta name="keywords" content="위즈덤, 명언, good phrase, wisdom, 오늘의, 오늘의 명언, 삶의 지혜"/>
+      <meta property="og:type" content="website"/>
+      <meta property="og:title" content="위즈덤"/>
+      <meta property="og:description" content="매일매일 삶의 지혜를 주는 명언’"/>
       <title>위즈덤</title>
     </head>
-    <body className={noto.className} >
-      <Header/>
-      {children}
+    <body className={noto.className}>
+    <Header/>
+    {children}
     </body>
     </html>
   );
