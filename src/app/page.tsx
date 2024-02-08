@@ -30,10 +30,9 @@ const ServerPage = () => {
                 height: '100vh', // 브라우저 높이로 설정
             }}>
             <div className="bg-white bg-opacity-40 h-screen flex justify-center items-center">
-                <section className="flex-col text-center">
-                    <h1>{wisdom.data[getIndex(wisdom.data.length)].author}</h1>
-                    <h3>{wisdom.data[getIndex(wisdom.data.length)].phrase}</h3>
-                    <h3>{background.data[getIndex(background.data.length)].filename}</h3>
+                <section className="flex-col text-center !font-daeam">
+                    <p className="text-xl font-bold">{wisdom.data[getIndex(wisdom.data.length)].phrase}</p>
+                    <p className="text-sm">- {wisdom.data[getIndex(wisdom.data.length)].author} -</p>
                 </section>
             </div>
         </div>
