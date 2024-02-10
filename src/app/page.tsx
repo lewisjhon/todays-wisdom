@@ -18,7 +18,7 @@ const ServerPage = () => {
 
     const getIndex = (length: number) => {
         const index = gap % length;
-        return index < 0 ? 0 : index ;
+        return index < 0 ? 0 : index;
     }
 
     return (
