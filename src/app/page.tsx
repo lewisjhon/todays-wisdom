@@ -29,7 +29,9 @@ const ServerPage = () => {
                 backgroundSize: 'cover', // 배경 이미지를 화면에 맞게 늘림
                 height: '100vh', // 브라우저 높이로 설정
             }}>
+                
             <div className="bg-white bg-opacity-40 h-screen flex justify-center items-center">
+            {start} / {current}
                 <section className="flex-col text-center !font-daeam">
                     <p className="text-xl font-bold">{wisdom.data[getIndex(wisdom.data.length)].phrase}</p>
                     <p className="text-sm">- {wisdom.data[getIndex(wisdom.data.length)].author} -</p>
