@@ -31,7 +31,6 @@ const ServerPage = () => {
             }}>
                 
             <div className="bg-white bg-opacity-40 h-screen flex justify-center items-center">
-            {start} / {current}
                 <section className="flex-col text-center !font-daeam">
                     <p className="text-xl font-bold">{wisdom.data[getIndex(wisdom.data.length)].phrase}</p>
                     <p className="text-sm">- {wisdom.data[getIndex(wisdom.data.length)].author} -</p>
