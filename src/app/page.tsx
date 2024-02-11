@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import {WisdomModel} from "@/models/Wisdom";
 import {DataModel} from "@/models/Common";
@@ -8,9 +10,9 @@ import {toLocaleDate} from "@/utils/date";
 import Image from "next/image";
 import Header from "@/components/Header";
 
-const ServerPage = async () => {
-    const wisdom = await require('../../public/data/ko/wisdom.json') as DataModel<WisdomModel>;
-    const background = await require('../../public/data/background.json') as DataModel<BackgroundModel>;
+const ServerPage = () => {
+    const wisdom = require('../../public/data/ko/wisdom.json') as DataModel<WisdomModel>;
+    const background = require('../../public/data/background.json') as DataModel<BackgroundModel>;
 
     const start = process.env.NEXT_PUBLIC_START_DATE;
     const current = toLocaleDate(dayjs(), "YYYY-MM-DD");
@@ -30,7 +32,7 @@ const ServerPage = async () => {
                 height: '100vh', // 브라우저 높이로 설정
             }}>
             <div className="text-white">
-                {start} / {current} / { toLocaleDate(dayjs(), "YYYY-MM-DD HH:mm:ss") } / {gap}
+                {start} / {current} / { toLocaleDate(dayjs(), "YYYY-MM-DD HH:mm:ss") } / {gap} 
             </div>
             <div className="bg-white bg-opacity-40 h-screen flex justify-center items-center">
                 <section className="flex-col text-center !font-daeam">

@@ -24,7 +24,7 @@ export default function RootLayout({
     <html lang="en">
     <head>
       <meta charSet="UTF-8"/>
-      <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+      <meta httpEquiv="X-UA-Compatible" content="IE=edge"/>
       <meta name="google-adsense-account" content="ca-pub-4667051183270672"/>
       <meta name="viewport"
             content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
