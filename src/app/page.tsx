@@ -8,9 +8,9 @@ import {toLocaleDate} from "@/utils/date";
 import Image from "next/image";
 import Header from "@/components/Header";
 
-const ServerPage = () => {
-    const wisdom = require('../../public/data/ko/wisdom.json') as DataModel<WisdomModel>;
-    const background = require('../../public/data/background.json') as DataModel<BackgroundModel>;
+const ServerPage = async () => {
+    const wisdom = await require('../../public/data/ko/wisdom.json') as DataModel<WisdomModel>;
+    const background = await require('../../public/data/background.json') as DataModel<BackgroundModel>;
 
     const start = process.env.NEXT_PUBLIC_START_DATE;
     const current = toLocaleDate(dayjs(), "YYYY-MM-DD");
