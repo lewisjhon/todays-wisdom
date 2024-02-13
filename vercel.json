@@ -2,8 +2,7 @@
   "routes": [
     {
       "src": "/",
-      "headers": { "cache-control": "s-maxage=1" },
-      "dest": "/index.html"
+      "headers": { "Cache-Control": "max-age=1" },
     }
   ]
 }
