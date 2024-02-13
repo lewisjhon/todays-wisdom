@@ -2,7 +2,7 @@ import {metadata} from "@/app/layout";
 
 const Header = () => {
     return (
-        <div className="absolute inset-x-0 flex justify-center items-center text-center h-[5rem]">
+        <div className="fixed inset-x-0 flex justify-center items-center text-center h-[4rem] bg-white bg-opacity-20">
             <section className="flex-col text-center">
                 <p className="text-lg font-bold">
                     {metadata.title?.toString()}

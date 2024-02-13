@@ -16,12 +16,6 @@ const ServerPage = () => {
     const current = toLocaleDate(dayjs(), "YYYY-MM-DD");
     const gap = dayjs(current).date() - dayjs(start).date();
 
-    // const ret = await fetch("http://localhost:3001/api/wisdom").then((resp) =>
-    //     resp.json()
-    // ).catch(error => console.log(error));
-    //
-    // console.log("api 결과", ret);
-
     const getIndex = (length: number) => {
         const index = gap % length;
         return index < 0 ? 0 : index;
