@@ -28,6 +28,7 @@ const ServerPage = () => {
     const gap = dayjs(current).date() - dayjs(start).date();
 
     const test = dayjs.utc(new Date()).tz(timeZone).format("YYYY-MM-DD hh:mm:ss");
+    const test2 = new Date().getSeconds();
 
     const getIndex = (length: number) => {
         const index = gap % length;
@@ -43,7 +44,7 @@ const ServerPage = () => {
                 height: '100vh', // 브라우저 높이로 설정
             }}>
             <div className="text-white">
-                { test }
+                { test } / {test2}
             </div>
             <div className="bg-white bg-opacity-40 h-screen flex justify-center items-center">
                 <section className="flex-col text-center !font-daeam w-[94%] md:w-[40rem]">
