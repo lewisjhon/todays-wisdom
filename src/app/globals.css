@@ -37,4 +37,7 @@ body {
   /*.text-balance {*/
   /*  text-wrap: balance;*/
   /*}*/
+  .static-panel {
+    @apply sticky top-0 shrink-0;
+  }
 }
