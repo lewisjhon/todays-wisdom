@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import {WisdomModel} from "@/models/Wisdom";
 import {DataModel} from "@/models/Common";
@@ -6,7 +8,7 @@ import dayjs from "dayjs";
 import * as process from "process";
 import {toLocaleDate} from "@/utils/date";
 
-const ServerPage = async () => {
+const ServerPage = () => {
     const wisdom = require('../../public/data/ko/wisdom.json') as DataModel<WisdomModel>;
     const background = require('../../public/data/background.json') as DataModel<BackgroundModel>;
 

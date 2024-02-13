@@ -1,7 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import {DataModel} from "@/models/Common";
 import {WisdomModel} from "@/models/Wisdom";
-import {BackgroundModel} from "@/models/Background";
 import * as console from "console";
 
 export async function GET(request: NextRequest) {
