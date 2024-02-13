@@ -2,7 +2,7 @@
   "routes": [
     {
       "src": "/",
-      "headers": { "Cache-Control": "max-age=1" },
+      "headers": { "Cache-Control": "max-age=1" }
     }
   ]
 }
