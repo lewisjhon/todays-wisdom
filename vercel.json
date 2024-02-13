@@ -1,22 +1,13 @@
 {
-  "rewrites": [
+  "headers": [
     {
-      "source": "/api/:path*",
-      "destination": "https://todays-wisdom.vercel.app/api/:path*"
-    },
-    {
-      "source": "/api/:path*/",
-      "destination": "https://todays-wisdom.vercel.app/api/:path*/"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/",
-      "headers": { "Cache-Control": "no-cache, no-store, must-revalidate" }
-    },
-    {
-      "src": "/api/wisdom",
-      "headers": { "Cache-Control": "no-cache, no-store, must-revalidate" }
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-cache, no-store, must-revalidate"
+        }
+      ]
     }
   ]
 }
