@@ -1,5 +1,3 @@
-"use client"
-
 import React from "react";
 import {WisdomModel} from "@/models/Wisdom";
 import {DataModel} from "@/models/Common";
