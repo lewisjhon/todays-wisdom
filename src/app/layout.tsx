@@ -24,6 +24,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <head>
+                <link rel="manifest" href="menifest.json" />
                 <meta charSet="UTF-8" />
                 <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
                 <meta

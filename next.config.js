@@ -34,4 +34,8 @@ const nextConfig = {
 };
 const withNextIntl = require("next-intl/plugin")("src/config/locale/i18n.ts");
 
-module.exports = withNextIntl(nextConfig);
+const withPWA = require("next-pwa")({
+    dest: "public",
+});
+
+module.exports = withPWA(withNextIntl(nextConfig));

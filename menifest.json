@@ -1,0 +1,17 @@
+{
+  "name": "위즈덤",
+  "short_name": "WISDOM",
+  "icons": [
+    {
+      "src": "/favicon.jpg",
+      "sizes": "256x256",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "theme_color": "#FFFFFF",
+  "background_color": "#FFFFFF",
+  "start_url": "/",
+  "display": "standalone",
+  "orientation": "portrait"
+}
