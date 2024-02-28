@@ -32,10 +32,21 @@ const nextConfig = {
         return config;
     },
 };
-const withNextIntl = require("next-intl/plugin")("src/config/locale/i18n.ts");
 
-const withPWA = require("next-pwa")({
-    dest: "public",
-});
+const withPlugins = require("next-compose-plugins");
+const withPWA = require("next-pwa");
 
-module.exports = withPWA(withNextIntl(nextConfig));
+module.exports = withPlugins(
+    [
+        [
+            withPWA,
+            {
+                pwa: {
+                    dest: "public",
+                },
+            },
+        ],
+        // 추가 플러그인 작성
+    ],
+    nextConfig,
+);
