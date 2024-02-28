@@ -1,11 +1,11 @@
 {
-  "theme_color": "#f69435",
-  "background_color": "#f69435",
+  "theme_color": "#757576",
+  "background_color": "#757576",
   "display": "standalone",
   "scope": "/",
   "start_url": "/",
   "name": "\uc704\uc988\ub364",
-  "short_name": "WISDOM",
+  "short_name": "위즈덤",
   "description": "\ub9e4\uc77c\ub9e4\uc77c \uc0b6\uc758 \uc9c0\ud61c\ub97c \uc8fc\ub294 \uba85\uc5b8",
   "icons": [
     {
