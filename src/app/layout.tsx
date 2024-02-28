@@ -3,6 +3,7 @@ import { Noto_Sans_KR as NOTO_SANS_KR } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/react";
 
 const noto = NOTO_SANS_KR({
     subsets: ["latin"],
@@ -49,6 +50,7 @@ export default function RootLayout({
             </head>
             <body className={noto.className}>
                 <Header />
+                <Analytics />
                 {children}
                 <Footer />
             </body>
