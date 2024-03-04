@@ -6,7 +6,6 @@ import { DataModel } from "@/models/Common";
 import { BackgroundModel } from "@/models/Background";
 import dayjs from "dayjs";
 import * as process from "process";
-import { toLocaleDate } from "@/utils/date";
 
 const ServerPage = () => {
     const wisdom =
@@ -15,8 +14,7 @@ const ServerPage = () => {
         require("../../public/data/background.json") as DataModel<BackgroundModel>;
 
     const start = process.env.NEXT_PUBLIC_START_DATE;
-    const current = toLocaleDate(dayjs(), "YYYY-MM-DD");
-    const gap = dayjs(current).date() - dayjs(start).date();
+    const gap = dayjs().diff(dayjs(start), "day");
 
     const getIndex = (length: number) => {
         const index = gap % length;
