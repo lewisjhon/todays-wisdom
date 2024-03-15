@@ -6,6 +6,7 @@ import { DataModel } from "@/models/Common";
 import { BackgroundModel } from "@/models/Background";
 import dayjs from "dayjs";
 import * as process from "process";
+import Introduce from "@/components/Introduce";
 
 const ServerPage = () => {
     const wisdom =
@@ -19,6 +20,10 @@ const ServerPage = () => {
     const getIndex = (length: number) => {
         const index = gap % length;
         return index < 0 ? 0 : index;
+    };
+
+    const onRefresh = () => {
+        window.location.reload();
     };
 
     return (

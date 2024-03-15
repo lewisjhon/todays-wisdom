@@ -1,4 +1,6 @@
 import { metadata } from "@/app/layout";
+import Introduce from "@/components/Introduce";
+import Popup from "@/components/Popup";
 
 const Header = () => {
     return (
@@ -9,6 +11,7 @@ const Header = () => {
                 </p>
                 <p className="text-xs">{metadata.description?.toString()}</p>
             </section>
+            {/*<Popup />*/}
         </div>
     );
 };
