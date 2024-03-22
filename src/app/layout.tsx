@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
+import React from "react";
 
 const noto = NOTO_SANS_KR({
     subsets: ["latin"],
@@ -48,11 +49,11 @@ export default function RootLayout({
                 />
                 <title>위즈덤</title>
             </head>
-            <body className={noto.className}>
+            <body className={`${noto.className}`}>
                 <Header />
-                <Analytics />
                 {children}
                 <Footer />
+                <Analytics />
             </body>
         </html>
     );

@@ -34,7 +34,7 @@ const ServerPage = () => {
                 })`,
                 backgroundPosition: "center", // 배경 이미지를 가운데 정렬
                 backgroundSize: "cover", // 배경 이미지를 화면에 맞게 늘림
-                height: "100vh", // 브라우저 높이로 설정
+                // height: "100vh", // 브라우저 높이로 설정
             }}
         >
             <div className="flex h-screen items-center justify-center bg-white bg-opacity-40">
