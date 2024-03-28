@@ -3,7 +3,7 @@
 import { AnimatePresence, motion } from "framer-motion";
 import React, { useState } from "react";
 
-const Introduce = () => {
+const Introduce = ({ title = "" }: { title?: string }) => {
     const [isVisible, setIsVisible] = useState(false);
     const container = {
         hidden: { opacity: 1, scale: 0 },
@@ -18,7 +18,7 @@ const Introduce = () => {
     };
 
     const item = {
-        hidden: { y: 20, opacity: 0 },
+        hidden: { y: 200, opacity: 0 },
         visible: {
             y: 0,
             opacity: 1,
@@ -27,14 +27,18 @@ const Introduce = () => {
     return (
         <div className="wrap">
             <div className="buttons">
-                <button type="button" onClick={() => setIsVisible(!isVisible)}>
-                    I
+                <button
+                    type="button"
+                    onClick={() => setIsVisible(!isVisible)}
+                    className="text-lg font-bold hover:text-hover"
+                >
+                    {title}
                 </button>
             </div>
             <AnimatePresence>
                 {isVisible && (
                     <motion.div
-                        className="box fixed left-[100px] h-[12.5rem] w-[12.5rem] bg-secondary md:left-[calc(100vx-65px)] md:w-[33rem]"
+                        className="box fixed left-1/2 top-1/2 h-[28rem] w-[31rem] -translate-x-1/2 -translate-y-1/2 transform rounded-2xl bg-gray-700 p-10 text-start text-white"
                         initial={{ opacity: 0 }}
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
@@ -45,7 +49,10 @@ const Introduce = () => {
                             initial="hidden"
                             animate="visible"
                         >
-                            <motion.li variants={item}>
+                            <motion.li
+                                variants={item}
+                                className="text-center text-2xl font-bold"
+                            >
                                 위즈덤(Wisdom)이란?
                             </motion.li>
                             <motion.li variants={item}>

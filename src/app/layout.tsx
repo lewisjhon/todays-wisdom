@@ -5,6 +5,8 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Analytics } from "@vercel/analytics/react";
 import React from "react";
+import { DataModel } from "@/models/Common";
+import { BackgroundModel } from "@/models/Background";
 
 const noto = NOTO_SANS_KR({
     subsets: ["latin"],
@@ -23,6 +25,9 @@ export default function RootLayout({
 }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const background =
+        require("../../public/data/background.json") as DataModel<BackgroundModel>;
+
     return (
         <html lang="en">
             <head>
@@ -50,10 +55,26 @@ export default function RootLayout({
                 <title>위즈덤</title>
             </head>
             <body className={`${noto.className}`}>
-                <Header />
-                {children}
-                <Footer />
-                <Analytics />
+                <div
+                    className="flex h-screen flex-col"
+                    style={{
+                        backgroundImage: `url(/images/background/${background.data[0].filename})`,
+                        backgroundPosition: "center", // 배경 이미지를 가운데 정렬
+                        backgroundSize: "cover", // 배경 이미지를 화면에 맞게 늘림
+                        height: "100vh", // 브라우저 높이로 설정
+                    }}
+                >
+                    <section className="bg-white bg-opacity-50">
+                        <Header />
+                    </section>
+                    <section className="flex-1 bg-white bg-opacity-40">
+                        {children}
+                    </section>
+                    <section className="bg-gray-600 bg-opacity-40">
+                        <Footer />
+                    </section>
+                    <Analytics />
+                </div>
             </body>
         </html>
     );
