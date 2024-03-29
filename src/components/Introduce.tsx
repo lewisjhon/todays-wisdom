@@ -69,10 +69,13 @@ const Introduce = ({ title = "" }: { title?: string }) => {
                                 </motion.li>
                                 <motion.li variants={item}>
                                     매일매일 인생에 도움이 되는 명언을
-                                    보여줍니다.
+                                    확인해보세요!
                                 </motion.li>
-                                <motion.li variants={item}>
-                                    한국 시간(KST) 기준 매일 자정(24:00)에
+                                <motion.li
+                                    variants={item}
+                                    className="text-xs font-light text-gray-300"
+                                >
+                                    ※ 한국 시간(KST) 기준 매일 자정(24:00)에
                                     새로운 명언으로 갱신 됩니다.
                                 </motion.li>
                             </motion.ul>
